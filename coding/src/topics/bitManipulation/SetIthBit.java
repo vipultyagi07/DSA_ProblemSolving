@@ -1,4 +1,4 @@
-package code360.bitManipulation;
+package topics.bitManipulation;
 
 public class SetIthBit {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package code360.bitManipulation;
+package topics.bitManipulation;
 
 public class ToggleIthBit {
 
