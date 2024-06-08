@@ -1,4 +1,4 @@
-package leetCode;
+package leetCode.singleNumberSecond;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -6,7 +6,7 @@ import java.util.Set;
 
 public class SingleNumberSecond137 {
     public static void main(String[] args) {
-        int[] arr = {2,1,3,1,4,4,2};
+        int[] arr = {5,5,5,7,4,4,4};
         // brute force
         System.out.println(singleNumber(arr));
         // optimized
@@ -40,8 +40,26 @@ public class SingleNumberSecond137 {
 
     public static int singleNumberOptimized(int[] nums) {
 
-        int xor=0;
+        int ans=0;
 
-        return xor;
+
+        for(int bit=0;bit<=31;bit++){
+
+            int count=0;
+            for(int n=0;n<nums.length;n++){
+
+                if((nums[n]&(1<<bit))!=0){
+                    count++;
+                }
+
+            }
+            if(count%3==1){
+                ans=ans|(1<<bit);
+            }
+
+        }
+        return ans;
     }
+
+
 }
