@@ -18,11 +18,11 @@ public class MinimumDifferenceElementInASortedArray {
     public static void main(String[] args) {
 
         int a[] = {1,5,9,12};
-        int target=5;
+        int target=19;
         Solution5 solution5 = new Solution5();
         int[] floorAndCeil = Solution5.findTheFloorAndCeil(a, a.length - 1, target);
 
-        int x= Math.max((target - floorAndCeil[0]), (target - floorAndCeil[1]));
+        int x= Math.min((target - floorAndCeil[0]), (target - floorAndCeil[1]));
         System.out.println(x);
 
 
