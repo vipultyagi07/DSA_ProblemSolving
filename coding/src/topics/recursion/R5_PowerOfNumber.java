@@ -6,7 +6,7 @@ public class R5_PowerOfNumber {
     }
 
     /**
-     * Calculates the Sum of an array's element using recursion
+     * Calculates the power of a number using recursion
      * <b>Example:</b>
      * <pre>
      * I/P: 2,10
