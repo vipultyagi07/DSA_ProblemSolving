@@ -1,6 +1,7 @@
 package topics.linkedList.doublyLinkedList;
 
-class Node{
+/*
+   class Node {
     int data;
     Node previous;
     Node next;
@@ -10,7 +11,7 @@ class Node{
         this.previous=null;
         this.next=null;
     }
-}
+}*/
 /**
  *  Array to Doubly linked list
  * <pre>
@@ -42,14 +43,14 @@ public class L5_ArrayToDoublyLinkedList {
         Node currentNode = head;
 
         while(currentNode.next!=null){
-            currentNode= currentNode.next;
+            currentNode = currentNode.next;
         }
 
         System.out.print("null <-->");
-        while (currentNode!=null) {
+        while (currentNode !=null) {
 
             System.out.print(currentNode.data + "<-->");
-            currentNode = currentNode.previous;
+            currentNode = currentNode.prev;
         }
         System.out.println("null");
     }
@@ -59,9 +60,9 @@ public class L5_ArrayToDoublyLinkedList {
        Node currentNode = head;
 
        System.out.print("null <-->");
-       while(currentNode!=null){
+       while(currentNode !=null){
            System.out.print(currentNode.data + "<-->");
-           currentNode= currentNode.next;
+           currentNode = currentNode.next;
        }
        System.out.println("null");
 
@@ -74,15 +75,15 @@ public class L5_ArrayToDoublyLinkedList {
 
         Node newNode = new Node(arr[1]);
         current.next= newNode;
-        newNode.previous= current;
+        newNode.prev= current;
 
-        current=newNode;
+        current= newNode;
 
         for(int i=2;i<arr.length;i++){
             newNode = new Node(arr[i]);
             current.next= newNode;
-            newNode.previous= current;
-            current=newNode;
+            newNode.prev= current;
+            current= newNode;
 
         }
 
