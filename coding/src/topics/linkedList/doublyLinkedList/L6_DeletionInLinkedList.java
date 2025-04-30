@@ -1,21 +1,10 @@
 package topics.linkedList.doublyLinkedList;
 
 
-class Node1{
-
-    int data;
-    Node1 prev;
-    Node1 next;
-
-    Node1(int data){
-        this.data=data;
-    }
-}
-
 public class L6_DeletionInLinkedList {
     public static void main(String[] args) {
 
-        Node1 dLinkedList =null;
+        Node dLinkedList =null;
 
 
         // Question 1: Delete head of the Doubly Linked List
@@ -45,16 +34,16 @@ public class L6_DeletionInLinkedList {
 
 
 
-    private static Node1 removeHead(Node1 head) {
+    private static Node removeHead(Node head) {
         head= head.next;
         head.prev=null;
         return head;
 
     }
 
-    private static Node1 removeTail(Node1 head) {
+    private static Node removeTail(Node head) {
 
-        Node1 current = head;
+        Node current = head;
 
 
 
@@ -68,10 +57,10 @@ public class L6_DeletionInLinkedList {
 
     }
 
-    private static Node1 removeNthNode(Node1 head, int k) {
+    private static Node removeNthNode(Node head, int k) {
 
         int count =0;
-        Node1 current= head;
+        Node current= head;
         if(head==null){
             return null;
         }
@@ -97,33 +86,33 @@ public class L6_DeletionInLinkedList {
 
 
 
-    private static  Node1 generateDoublyLinkedList() {
+    private static  Node generateDoublyLinkedList() {
 
-        Node1 head = new Node1(1);
+        Node head = new Node(1);
 
-        Node1 current = head;
+        Node current = head;
 
-        current.next= new Node1(2);
+        current.next= new Node(2);
         current= current.next;
 
-        current.next= new Node1(3);
+        current.next= new Node(3);
         current.prev=current;
         current= current.next;
 
-        current.next= new Node1(4);
+        current.next= new Node(4);
         current.prev=current;
         current= current.next;
 
-        current.next= new Node1(5);
+        current.next= new Node(5);
         current.prev=current;
 
         return head;
 
     }
 
-    private static void printForward(Node1 head) {
+    private static void printForward(Node head) {
 
-        Node1 currentNode = head;
+        Node currentNode = head;
 
         System.out.print("null <-->");
         while(currentNode!=null){
