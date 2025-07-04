@@ -1,5 +1,9 @@
 package topics.linkedList.doublyLinkedList;
 
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.List;
+
 public class L8_ReverseDLL {
 
     public static void main(String[] args) {
@@ -17,6 +21,18 @@ public class L8_ReverseDLL {
 
         System.out.println("Reversed list:");
         dll.printList();
+
+        List<Integer> list = new ArrayList<>();
+        list.add(1);
+        list.add(2);
+
+        List<Integer> list2=list;
+
+        list.sort(Comparator.reverseOrder());
+
+        if(list2.equals(list)){
+            System.out.println("yessss");
+        }
 
     }
 
@@ -39,7 +55,6 @@ public class L8_ReverseDLL {
 
         return newHead;
     }
-
 
 }
 
